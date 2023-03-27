@@ -25,4 +25,5 @@ const evaluateMathExpression = (num1, num2, operation) => {
   }
 };
 
+// eslint-disable-next-line object-curly-newline
 export { generateRandomNum, isEven, boolToYesNo, getMathOperator, evaluateMathExpression };
