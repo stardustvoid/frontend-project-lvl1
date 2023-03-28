@@ -37,5 +37,36 @@ const findGCD = (num1, num2) => {
   return b;
 };
 
+const generateProgression = (start, difference, length) => {
+  let progression = [start];
+  let lastElement = start;
+
+  for (let i = 1; i < length; i += 1) {
+    const nextElement = lastElement + difference;
+    progression = [...progression, nextElement];
+    lastElement = nextElement;
+  }
+
+  return progression;
+};
+
+const hideElementInProgression = (progression) => {
+  const progressionLength = progression.length;
+  const elementIndex = generateRandomNum(0, progressionLength - 1);
+  const hiddenElement = progression.splice(elementIndex, 1, '..');
+  const progressionString = progression.join(' ');
+
+  return [progressionString, hiddenElement];
+};
+
 // eslint-disable-next-line object-curly-newline
-export { generateRandomNum, isEven, boolToYesNo, getMathOperator, evaluateMathExpression, findGCD };
+export {
+  generateRandomNum,
+  isEven,
+  boolToYesNo,
+  getMathOperator,
+  evaluateMathExpression,
+  findGCD,
+  generateProgression,
+  hideElementInProgression,
+};
