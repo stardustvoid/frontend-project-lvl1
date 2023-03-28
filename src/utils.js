@@ -59,7 +59,6 @@ const hideElementInProgression = (progression) => {
   return [progressionString, hiddenElement];
 };
 
-// eslint-disable-next-line object-curly-newline
 export {
   generateRandomNum,
   isEven,
