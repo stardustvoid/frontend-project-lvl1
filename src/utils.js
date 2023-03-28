@@ -2,6 +2,16 @@ const generateRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 
 
 const isEven = (num) => num % 2 === 0;
 
+const isPrime = (num) => {
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
 const boolToYesNo = (bool) => (bool ? 'yes' : 'no');
 
 const getMathOperator = () => {
@@ -62,6 +72,7 @@ const hideElementInProgression = (progression) => {
 export {
   generateRandomNum,
   isEven,
+  isPrime,
   boolToYesNo,
   getMathOperator,
   evaluateMathExpression,
