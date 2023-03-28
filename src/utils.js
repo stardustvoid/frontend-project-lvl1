@@ -25,5 +25,17 @@ const evaluateMathExpression = (num1, num2, operation) => {
   }
 };
 
+const findGCD = (num1, num2) => {
+  let a = num1;
+  let b = num2;
+  while (a % b !== 0) {
+    const remainder = a % b;
+    a = b;
+    b = remainder;
+  }
+
+  return b;
+};
+
 // eslint-disable-next-line object-curly-newline
-export { generateRandomNum, isEven, boolToYesNo, getMathOperator, evaluateMathExpression };
+export { generateRandomNum, isEven, boolToYesNo, getMathOperator, evaluateMathExpression, findGCD };
