@@ -11,6 +11,7 @@ const generateGameData = () => {
   const progression = generateProgression(
     progressionStart,
     progressionDifference,
+    // eslint-disable-next-line comma-dangle
     progressionLength
   );
 
