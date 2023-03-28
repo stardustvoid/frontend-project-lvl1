@@ -9,7 +9,7 @@ const generateGameData = () => {
   const operation = getMathOperator();
 
   const question = `${num1} ${operation} ${num2}`;
-  const answer = String(evaluateMathExpression(num1, num2, operation));
+  const answer = evaluateMathExpression(num1, num2, operation);
 
   return [question, answer];
 };
